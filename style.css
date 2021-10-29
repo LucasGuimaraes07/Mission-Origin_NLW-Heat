@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* font-family: 'Roboto', sans-serif; */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --black: #1f1f23;
+  --grey: #e0e0e5;
+  --greydark: #29292e;
+  
+}
+
+body {
+  
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing:antialiased; /* Propriedade vai funcionar apenas nos navegadores webkit*/
+  display: grid;
+  place-items: center;
+  color: var(--grey);
+}
+
+main{
+  background: url(images/background.svg) no-repeat center/cover ;
+  /* width: 375px;
+  height: 812px;
+  border-radius: 5px; */
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+  
+
+  
+}
+
+.container{
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.avatar{
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span{
+
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img { /* a classe chama a tag em primeiro nivel*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /*a imagem se adapta com as definiçoes */
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); /* https://bennettfeely.com/clippy/ */
+}
+
+h1 {
+  font-size: 1.5rem;
+
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul{
+  margin-top: 4rem;
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+ul a:hover{
+  box-shadow: 0px 0px 15px #ffff00;
+}
+
+.footer {
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+	/* estilos versão tablet */
+  body{
+    background: url(images/Desktop.svg);
+    background-color: var(--greydark);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+  }
+  main{
+    background: url(images/mask.svg) no-repeat;
+    width: 358px;
+    min-height: 540px;
+    height: 560px;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: 1px solid #adad69e8;
+    box-shadow: 5px 5px 15px #ffff00;
+  }
+  .avatar{
+    margin: 4.5rem auto 0;
+  }
+
+
+  .faixa{
+    position: relative;
+  }
+  .fita{
+    position: absolute;
+    width: 64px;
+    height: 100px;
+    left: calc(50% - 64px/2);
+    top: -1px;
+    z-index: 1;
+
+    background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%);
+  }
+  .quebra{
+    position: relative;
+    width: 80px;
+    height: 8px;
+    top: 95px;
+
+    background-color: var(--black);
+  }
+  ul {
+    margin-top: 2rem;
+  }
+  .footer {
+    padding-bottom: 0.5rem;
+    /* margin-bottom: 10px; */
+  }
+} 
+
+@media (min-width: 960px) {
+	/* estilos versão desktop */
+  body{
+    background: url(images/Desktop.svg);
+    background-color: var(--greydark);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+  }
+  main{
+    background: url(images/mask.svg) no-repeat;
+    width: 358px;
+    min-height: 540px;
+    height: 560px;
+    margin-top: 100px;
+    border-radius: 10px;
+    border: 1px solid #adad69e8;
+    box-shadow: 5px 5px 15px #ffff00;
+  }
+  .avatar{
+    margin: 4.5rem auto 0;
+  }
+
+
+  .faixa{
+    position: relative;
+  }
+  .fita{
+    position: absolute;
+    width: 64px;
+    height: 150px;
+    left: calc(50% - 64px/2);
+    top: -1px;
+    z-index: 1;
+
+    background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%);
+  }
+  .quebra{
+    position: relative;
+    width: 80px;
+    height: 8px;
+    top: 145px;
+
+    background-color: var(--black);
+  }
+  ul {
+    margin-top: 2rem;
+  }
+  .footer {
+    padding-bottom: 0.5rem;
+    /* margin-bottom: 10px; */
+  }
+  
+}
+
